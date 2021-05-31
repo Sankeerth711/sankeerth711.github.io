@@ -273,12 +273,28 @@
     <h3> Subscibe for this blog</h3>
 
     <form>
-      <label for="fname">First name:</label><br>
+      <label for="fname" style="color:white;">First name:</label><br>
       <input type="text" id="fname" name="fname"><br>
-      <label for="lname">Last name:</label><br>
-      <input type="text" id="lname" name="lname">
-      <label for="emailid">E-mail ID:</label><br>
+      <label for="lname" style="color:white;">Last name:</label><br>
+      <input type="text" id="lname" name="lname"><br>
+      <label for="emailid" style="color:white;">E-mail ID:</label><br>
       <input type="text" id="emailid" name="emailid">
+    </form>
+
+    <form action="/action_page.php">
+      <label for="phone" style="color:white;">Enter a phone number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+
+    <form action="/action_page.php">
+      <label for="cars" style="color:white;">Choose subscription type:</label>
+      <select id="cars" name="cars">
+        <option value="volvo">Daily</option>
+        <option value="saab">Weekly</option>
+        <option value="fiat">Monthly</option>
+      </select>
+      <input type="submit">
     </form>
 
   </div>
