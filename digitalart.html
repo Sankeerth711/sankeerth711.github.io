@@ -5,21 +5,19 @@
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    
+        <link rel="stylesheet" href="menu.css">    
     <style>
         body {
             background-image: url('background.jpg');
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
+            overflow-x: hidden;
         }
 
         h1 {
             color: white;
-            text-align: center;
-        }
-
-        h1 {
-            text-align: left;
         }
 
         div.headding {
@@ -27,10 +25,16 @@
             left: 500px;
         }
 
-        div.card1 {
+        div.main-content {
             position: relative;
             left: -50px;
-            top: 100px;
+            top: 200px;
+        }
+
+        div.back {
+            position: relative;
+            left: -100px;
+            top: 120px;
         }
     </style>
 
@@ -44,10 +48,30 @@
 
         <a href="index.html"> <img src="logo.gif" style="float:left;width:100px;height: 100px;">
         </a>
+        <a href="portfolio.html"></a><div class="back"><button type="button" class="btn btn-outline-primary">Go Back</button></div></a>
 
         <div class="menu">
 
+            <div class="menu">
 
+                <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+                <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
+                <input type="checkbox" id="active">
+                <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+                <div class="wrapper">
+                    <ul>
+                        <li class="class"><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+    
+    
+            </div>
 
         </div>
 
@@ -57,19 +81,107 @@
         <br>
         <h1><u>Digital Art</u></h1>
     </div>
-
-    <div class="card1">
-        <div class="card" style="width: 18rem;">
-            <img src="DA1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Wolf Digital Art</h5>
-                <p class="card-text">digital art of wolf made on Apple iPad 6th gen, using autodesk sketchbook.</p>
-                <a href="https://youtu.be/Xznd1oFzqIs" class="btn btn-primary" target="_blank">YouTube Video</a>
+    <div class="main-content">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="DA1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                        <a href="https://youtu.be/Xznd1oFzqIs" class="btn btn-primary" target="_blank">YouTube Video</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="DA2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                            <a href="https://youtu.be/E_RTZY9UyV8" class="btn btn-primary" target="_blank">YouTube Video</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="DA3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content.</p>
+                            <a href="https://youtu.be/gtcl25z2T2I" class="btn btn-primary" target="_blank">YouTube Video</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="DA4.PNG" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                            <a href="https://youtu.be/qWu1DaFSlm0" class="btn btn-primary" target="_blank">YouTube Video</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="DA5.PNG" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                            <a href="https://youtu.be/tlXDqaoA8ms" class="btn btn-primary" target="_blank">YouTube Video</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="DA6.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="DA7.PNG" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                            <a href="https://youtu.be/nBx4OPuHC20" class="btn btn-primary" target="_blank">YouTube Video</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="DA8.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                            <a href="https://youtu.be/HJJ3CrcLVQ4" class="btn btn-primary" target="_blank">YouTube Video</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="DA9.PNG" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-
     <div class="footer">
 
 
