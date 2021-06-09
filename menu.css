@@ -36,6 +36,7 @@
     /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%); */
     background: rgb(0, 0, 0);
     transition: all 0.3s ease-in-out;
+    z-index: 2;
 }
 
 #active:checked~.menu-btn {
@@ -100,7 +101,7 @@
     /* if the font is 'Oswald'*/
     border-radius: 50px;
     transform: scaleY(0);
-    z-index: 1;
+    z-index: -1;
     animation: rotate 1.5s linear infinite;
     transition: transform 0.3s ease;
 }
@@ -122,7 +123,7 @@ input[type="checkbox"] {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
+    z-index: -1;
     text-align: center;
     left: 300px;
     color: #ffffff;
@@ -137,4 +138,3 @@ input[type="checkbox"] {
         filter: hue-rotate(360deg);
     }
 }
-
