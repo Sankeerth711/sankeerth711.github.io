@@ -3,159 +3,12 @@
 <html>
 
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+  <link rel="stylesheet" href="contact.css">
 
-  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
   <title> Veggalam Sai Sankeerth </title>
-  <style>
-    body {
-      background-image: url('background.jpg');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-      overflow-x: hidden;
-    }
 
-    h1 {
-      color: white;
-      position: relative;
-      left: 500px;
-    }
-
-
-    .wrapper {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      /*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
-      /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
-      /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%);*/
-      /* clip-path: circle(25px at calc(0% + 45px) 45px); */
-      background: rgba(0, 0, 0, 0.733);
-      clip-path: circle(25px at calc(100% - 45px) 45px);
-      transition: all 0.3s ease-in-out;
-      z-index: 1;
-    }
-
-    #active:checked~.wrapper {
-      clip-path: circle(75%);
-    }
-
-    .menu-btn {
-      position: absolute;
-      z-index: 2;
-      right: 20px;
-      top: 20px;
-      height: 50px;
-      width: 50px;
-      text-align: center;
-      line-height: 50px;
-      border-radius: 50%;
-      font-size: 20px;
-      color: #fff;
-      cursor: pointer;
-      /*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
-      /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
-      /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%); */
-      background: rgb(0, 0, 0);
-      transition: all 0.3s ease-in-out;
-    }
-
-    #active:checked~.menu-btn {
-      color: #fff;
-    }
-
-    #active:checked~.menu-btn i:before {
-      content: "\f00d";
-    }
-
-    .wrapper ul {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      list-style: none;
-      text-align: center;
-    }
-
-    .wrapper ul li {
-      margin: 15px 0;
-    }
-
-    .wrapper ul li a {
-      color: none;
-      text-decoration: none;
-      font-size: 30px;
-      font-weight: 500;
-      padding: 5px 30px;
-      color: #fff;
-      border-radius: 50px;
-      background: rgb(0, 0, 0);
-      position: relative;
-      line-height: 50px;
-      transition: all 0.3s ease;
-    }
-
-    .wrapper ul li.class a {
-      color: none;
-      text-decoration: none;
-      font-size: 30px;
-      font-weight: 500;
-      padding: 5px 30px;
-      color: #fff;
-      border-radius: 50px;
-      background: rgb(0, 0, 0);
-      position: relative;
-      line-height: 50px;
-      transition: all 0.3s ease;
-    }
-
-    .wrapper ul li a:after {
-      position: absolute;
-      content: "";
-      background: #fff;
-      background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
-      /*background: linear-gradient(375deg, #1cc7d0, #2ede98);*/
-      width: 104%;
-      height: 110%;
-      left: -2%;
-      top: -5%;
-      /* if the font is 'Oswald'*/
-      border-radius: 50px;
-      transform: scaleY(0);
-      z-index: -1;
-      animation: rotate 1.5s linear infinite;
-      transition: transform 0.3s ease;
-    }
-
-    .wrapper ul li a:hover:after {
-      transform: scaleY(1);
-    }
-
-    .wrapper ul li a:hover {
-      color: #fff;
-    }
-
-    input[type="checkbox"] {
-      display: none;
-    }
-
-    @keyframes rotate {
-      0% {
-        filter: hue-rotate(0deg);
-      }
-
-      100% {
-        filter: hue-rotate(360deg);
-      }
-    }
-
-
-  </style>
 </head>
 
 <body>
@@ -166,7 +19,9 @@
 
     <div class="menu">
 
-
+      <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
       <input type="checkbox" id="active">
       <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
@@ -188,17 +43,24 @@
   <br>
   <br>
   <div class="headding">
-    <h1>Contact</h1>
+    <h1><u>Contact</u></h1>
   </div>
 
   <div class="social">
-    <a href="#" class="fa fa-twitter"></a>
-    <a href="#" class="fa fa-google"></a>
-    <a href="#" class="fa fa-linkedin"></a>
-    <a href="#" class="fa fa-youtube"></a>
-    <a href="#" class="fa fa-instagram"></a>
-    <a href="#" class="fa fa-snapchat-ghost"></a>
-    <a href="#" class="fa fa-reddit"></a>
+    <ul class="soclinks">
+      <li><a href="mailto: sankeerth711@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+      </li>
+      <li><a href="https://twitter.com/VegglamSai" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+      </li>
+      <li><a href="https://www.youtube.com/c/Drawtoons" target="_blank"><i class="fab fa-youtube"
+            aria-hidden="true"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/sai-sankeerth-veggalam-09aa92206/" target="_blank"><i
+            class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+      <li><a href="https://www.instagram.com/kirku_711/" target="_blank"><i class="fab fa-instagram"
+            aria-hidden="true"></i></a></li>
+      <li><a href="https://www.instagram.com/kirku_711/" target="_blank"><i class="fab fa-reddit"
+            aria-hidden="true"></i></a></li>
+    </ul>
   </div>
 
   <div class="footer">
