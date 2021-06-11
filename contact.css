@@ -143,8 +143,8 @@ body {
   }
 
   .soclinks {
-    position: absolute;
-    top: 50%;
+    position: relative;
+    top: 300px;
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 0;
