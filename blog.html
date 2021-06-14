@@ -9,6 +9,7 @@
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
+      overflow-x: hidden;
     }
 
     h1 {
@@ -26,154 +27,143 @@
       left: 10px;
     }
 
+    div.headding {
+            position: relative;
+            left: 500px;
+        }
+
     /* 
 ========================
       BUTTONS
 ========================
 */
-
-    @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
-
-    html,
-    body {
-      width: 100%;
+    .wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
       height: 100%;
-      overflow: hidden;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      font-family: 'Open Sans Condensed', sans-serif;
-    }
-
-    div[class*=box] {
-      height: 33.33%;
       width: 100%;
-      display: flex;
-      align-items: center;
+      /*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
+      /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+      /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%);*/
+      /* clip-path: circle(25px at calc(0% + 45px) 45px); */
+      background: rgba(0, 0, 0, 0.733);
+      clip-path: circle(25px at calc(100% - 45px) 45px);
+      transition: all 0.3s ease-in-out;
+      z-index: 1;
     }
 
-    .btn {
-      line-height: 50px;
+    #active:checked~.wrapper {
+      clip-path: circle(75%);
+    }
+
+    .menu-btn {
+      position: absolute;
+      z-index: 5;
+      right: 20px;
+      top: -25px;
       height: 50px;
+      width: 50px;
       text-align: center;
-      width: 150px;
+      line-height: 50px;
+      border-radius: 50%;
+      font-size: 20px;
+      color: #fff;
       cursor: pointer;
+      /*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
+      /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+      /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%); */
+      background: rgb(0, 0, 0);
+      transition: all 0.3s ease-in-out;
     }
 
-    /* 
-========================
-      BUTTON ONE
-========================
-*/
-    .btn-one {
-      color: #FFF;
-      transition: all 0.3s;
-      position: relative;
+    #active:checked~.menu-btn {
+      color: #fff;
     }
 
-    .btn-one span {
-      transition: all 0.3s;
+    #active:checked~.menu-btn i:before {
+      content: "\f00d";
     }
 
-    .btn-one::before {
-      content: '';
+    .wrapper ul {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      opacity: 0;
-      transition: all 0.3s;
-      border-top-width: 1px;
-      border-bottom-width: 1px;
-      border-top-style: solid;
-      border-bottom-style: solid;
-      border-top-color: rgba(255, 255, 255, 0.5);
-      border-bottom-color: rgba(255, 255, 255, 0.5);
-      transform: scale(0.1, 1);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      list-style: none;
+      text-align: center;
     }
 
-    .btn-one:hover span {
-      letter-spacing: 2px;
+    .wrapper ul li {
+      margin: 15px 0;
     }
 
-    .btn-one:hover::before {
-      opacity: 1;
-      transform: scale(1, 1);
+    .wrapper ul li a {
+      color: none;
+      text-decoration: none;
+      font-size: 30px;
+      font-weight: 500;
+      padding: 5px 30px;
+      color: #fff;
+      border-radius: 50px;
+      background: rgb(0, 0, 0);
+      position: relative;
+      line-height: 50px;
+      transition: all 0.3s ease;
     }
 
-    .btn-one::after {
-      content: '';
+    .wrapper ul li.class a {
+      color: none;
+      text-decoration: none;
+      font-size: 30px;
+      font-weight: 500;
+      padding: 5px 30px;
+      color: #fff;
+      border-radius: 50px;
+      background: rgb(0, 0, 0);
+      position: relative;
+      line-height: 50px;
+      transition: all 0.3s ease;
+    }
+
+    .wrapper ul li a:after {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      transition: all 0.3s;
-      background-color: rgba(255, 255, 255, 0.1);
+      content: "";
+      background: #fff;
+      background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+      /*background: linear-gradient(375deg, #1cc7d0, #2ede98);*/
+      width: 104%;
+      height: 110%;
+      left: -2%;
+      top: -5%;
+      /* if the font is 'Oswald'*/
+      border-radius: 50px;
+      transform: scaleY(0);
+      z-index: -1;
+      animation: rotate 1.5s linear infinite;
+      transition: transform 0.3s ease;
     }
 
-    .btn-one:hover::after {
-      opacity: 0;
-      transform: scale(0.1, 1);
+    .wrapper ul li a:hover:after {
+      transform: scaleY(1);
     }
 
-    a:link {
-      color: white;
-      background-color: transparent;
-      text-decoration: none;
+    .wrapper ul li a:hover {
+      color: #fff;
     }
 
-    a:visited {
-      color: white;
-      background-color: transparent;
-      text-decoration: none;
+    input[type="checkbox"] {
+      display: none;
     }
 
-    /* 
-========================
-      BUTTONS
-========================
-*/
+    @keyframes rotate {
+      0% {
+        filter: hue-rotate(0deg);
+      }
 
-    /* 
-========================
-      BUTTONS POSITION
-========================
-*/
-
-    div.home {
-      position: relative;
-      top: -90px;
-      left: 120px;
-    }
-
-    div.about {
-      position: relative;
-      top: -140px;
-      left: 300px;
-    }
-
-    div.portifolio {
-      position: relative;
-      top: -190px;
-      left: 480px;
-    }
-
-    div.blog {
-      position: relative;
-      top: -240px;
-      left: 660px;
-    }
-
-
-    div.contact {
-      position: relative;
-      top: -290px;
-      left: 840px;
+      100% {
+        filter: hue-rotate(360deg);
+      }
     }
 
     /* 
@@ -184,7 +174,7 @@
 
     div.main-content {
       position: relative;
-      top: -260px;
+      top: 100px;
       left: 0px;
     }
   </style>
@@ -198,77 +188,31 @@
   <div class="header" id="header">
 
     <a href="index.html"> <img src="logo.gif" style="float:left;width:100px;height: 100px;"> </a>
-
     <div class="menu">
+      <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-      <div class="home">
-
-        <div class="box-1">
-          <a href="index.html">
-            <div class="btn btn-one">
-              <span>HOME</span>
-            </div>
-          </a>
-        </div>
-
+      <input type="checkbox" id="active">
+      <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+      <div class="wrapper">
+        <ul>
+          <li class="class"><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </div>
-
-      <div class="about">
-
-        <div class="box-1">
-          <a href="about.html">
-            <div class="btn btn-one">
-              <span>ABOUT</span>
-            </div>
-          </a>
-        </div>
-
-      </div>
-
-      <div class="portifolio">
-
-        <div class="box-1">
-          <a href="portfolio.html">
-            <div class="btn btn-one">
-              <span>PORTIFOLIO</span>
-            </div>
-          </a>
-        </div>
-
-      </div>
-
-      <div class="blog">
-
-        <div class="box-1">
-          <a href="blog.html">
-            <div class="btn btn-one">
-              <span>BLOG</span>
-            </div>
-          </a>
-        </div>
-
-      </div>
-
-      <div class="contact">
-
-        <div class="box-1">
-          <a href="contact.html">
-            <div class="btn btn-one">
-              <span>CONTACT</span>
-            </div>
-          </a>
-        </div>
-
-      </div>
-
     </div>
-
   </div>
 
-
-  <div class="main-content">
+  <div class="headding">
 
     <h1>Blog</h1>
+  </div>
+
+  <div class="main-content">
 
     <h3 style="color:white;"> Subscibe for this blog</h3>
 
